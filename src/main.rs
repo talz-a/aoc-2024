@@ -8,9 +8,8 @@ fn entry() -> Result<(), ()> {
         eprint!("ERROR: no day is provided");
     })?;
     match day.as_str() {
-        "day01" => {
-            days::day01::solve();
-        }
+        "day01" => days::day01::solve(),
+        "day02" => days::day02::solve(),
         _ => {
             eprint!("ERROR: day not implemented");
             return Err(());
