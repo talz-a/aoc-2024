@@ -34,6 +34,7 @@ fn part_one() {
         .map(|nums| is_valid(&nums)) 
         .map(|v| v as u32)
         .sum();
+
     println!("ANSWER: {res}");
 }
 
@@ -57,5 +58,6 @@ fn part_two() {
         })
         .map(|v| v as u32)
         .sum();
+
     println!("ANSWER: {res}");
 }

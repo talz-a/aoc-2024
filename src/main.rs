@@ -3,9 +3,9 @@ use std::{env, process::ExitCode};
 
 fn entry() -> Result<(), ()> {
     let mut args = env::args();
-    args.next().expect("Program path needs to be provided");
+    args.next().expect("ERROR: Program path needs to be provided");
     let day = args.next().ok_or_else(|| {
-        eprint!("ERROR: no day is provided");
+        eprint!("USSAGE: cargo run <day>");
     })?;
     match day.as_str() {
         "day01" => days::day01::solve(),

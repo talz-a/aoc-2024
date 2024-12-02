@@ -18,11 +18,13 @@ fn parse_file() -> Result<(Vec<i32>, Vec<i32>), ()> {
             left.push(left_num.parse::<i32>().unwrap());
             right.push(right_num.parse::<i32>().unwrap());
         });
+
     Ok((left, right))
 }
 
 fn part_two() {
     let (left, right) = parse_file().expect("ERROR: could not parse file");
+
     let right_freq = right
         .iter()
         .copied()
